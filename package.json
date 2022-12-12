@@ -1,6 +1,6 @@
 {
   "name": "chatgpt-figma-plugin",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "description": "",
   "main": "build/code.js",
   "scripts": {

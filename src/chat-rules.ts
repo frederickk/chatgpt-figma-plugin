@@ -5,20 +5,22 @@ export interface IConfig {
 }
 
 // https://github.com/gragland/chatgpt-chrome-extension/blob/main/plugins/Default.js
+// Stop telling me you can't browse the internet, etc
 const Style = {
   rules: [
     `If I say create something I mean do some creative writing about it, not browse the internet.`,
   ],
 };
 
-// // https://github.com/gragland/chatgpt-chrome-extension/blob/main/plugins/Image.js
-// const Image = {
-//   rules: [
-//     `You are an AI that's good at describing images.`,
-//     `First check if my message includes the word "image", "photo", "picture", or "drawing"`,
-//     `If it does include one of those words then at the very end of your reply you should include an image description enclosed in double curly brackets.`,
-//     `If it does not include one of those words then don't add an image description.`,
-//   ],
+// https://github.com/gragland/chatgpt-chrome-extension/blob/main/plugins/Image.js
+// Add image generation ability
+const Image = {
+  rules: [
+    `You are an AI that's good at describing images.`,
+    `First check if my message includes the word "image", "photo", "picture", or "drawing"`,
+    `If it does include one of those words then at the very end of your reply you should include an image description enclosed in double curly brackets.`,
+    `If it does not include one of those words then don't add an image description.`,
+  ],
 //   parse: async (reply: string) => {
 //     // Match anything between {{ }}
 //     const regex = /\{\{([^\]]+?)\}\}/g;
@@ -58,13 +60,11 @@ const Style = {
 
 //     return reply;
 //   },
-// };
+};
 
 export default {
   plugins: [
-    // Stop telling me you can't browse the internet, etc
     Style,
-    // Add image generation ability
-    // Image,
+    Image,
   ],
 };

@@ -4,9 +4,11 @@
 :root {
   --background-color: #fff;
   --border-radius: 8px;
-  --font-size: 14px;
   --error--color: #530101;
   --error--background-color: #ffc5bf;
+  --font-size: 14px;
+  --line-height: 1.3em;
+  --type--tiny: 9px;
 }
 
 body,
@@ -29,8 +31,46 @@ button,
   justify-content: center;
 }
 
-textarea {
-  line-height: 1.2em !important;
+details {
+  border-top: 1px solid var(--black1);
+  padding-block-start: 1ch;
+
+  &:last-of-type {
+    padding-bottom: 2ch;
+  }
+}
+
+footer {
+  align-content: center;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--black1);
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: var(--type--tiny);
+  justify-content: space-between;
+  padding: 1ch;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+
+  div {
+   opacity: .6;
+  }
+}
+
+summary {
+  &.label {
+    display: list-item;
+    text-align: left;
+  }
+}
+
+textarea,
+.textarea {
+  font-family: 'Roboto Mono', monospace;
+  line-height: var(--line-height) !important;
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
@@ -49,8 +89,31 @@ textarea {
   flex-flow: column nowrap;
   gap: 1ch;
   height: calc(100% - 20px);
-  justify-content: space-between;
-  margin: 1ch;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 1ch;
+
+  & > *:first-child {
+    flex-grow: 1;
+  }
+}
+
+.disclaimer {
+  background-color: var(--white);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+
+  &__text {
+    color: var(--toolbar);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    line-height: var(--line-height) !important;
+  }
 }
 
 .--error {
@@ -80,13 +143,16 @@ textarea {
 .konsole,
 #konsole {
   align-items: flex-start;
+  background-color: var(--toolbar);
   border: 0 !important;
+  border-radius: 1ch;
   color: var(--black3);
   display: flex;
   flex-direction: column-reverse;
-  font-family: 'Roboto Mono', monospace !important;
-  font-size: 10px;
+  font-size: var(--type--tiny);
   gap: 2ch;
+  height: 18em;
+  margin-bottom: 3ch;
   overflow: hidden scroll;
   text-align: left;
   white-space: pre-wrap;
