@@ -1,6 +1,6 @@
 # ChatGPT Figma Plugin
 
-v.0.2.1
+v.0.2.2
 
 ### Experimental ChatGPT plugin for Figma
 
@@ -9,7 +9,7 @@ v.0.2.1
 
 ![Screen capture of ChatGPT Figma Plugin UI](./assets/chat-gpt-figma-plugin-simple.gif)
 
-This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonalby comfortable with terminal, as setup is a bit fussy.
+This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy.
 
 
 ---
@@ -18,13 +18,13 @@ This plugin is experimental and takes advantage of an [unofficial ChatGPT API](h
 **Prerequisites**
 
 1. Create an [OpenAI account](https://auth0.openai.com/u/signup/)
-2. Make sure you have Node 17.0+ installed. I recommended [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for handling Node versioning.
+2. Make sure you have Node 18.0+ installed. I recommended [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for handling Node versioning.
 
 **Install**
 
 1. Clone this repository into directory of your choice. `git clone https://github.com/frederickk/chatgpt-figma-plugin.git`
 2. Install necessary dependencies `npm install` (you might need to run `npm install --legacy-peer-deps`)
-3. Get a valid session token from [ChatGPT](https://chat.openai.com) (steps for getting the token are outlined [here](https://github.com/transitive-bullshit/chatgpt-api#session-tokens)), create a `.env` file, and paste the code into the file `SESSION_TOKEN="..."`
+3. Get a valid session token and a valid [clerance token](https://github.com/transitive-bullshit/chatgpt-api/issues/96) from [ChatGPT](https://chat.openai.com) (steps for getting the token are outlined [here](https://github.com/transitive-bullshit/chatgpt-api#session-tokens)), create a `.env` file, and paste the code into the file `SESSION_TOKEN="..."` and `CLEARANCE_TOKEN="..."`
 3. [Build](#build) then run the ChatGPT intermediate server `npm run serve`.
 4. Load the plugin within Figma **Plugins > Development > Import plugin from manifest...**
 5. Et voilà!

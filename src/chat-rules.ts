@@ -11,11 +11,6 @@ const Style = {
   ],
 };
 
-// https://github.com/gragland/chatgpt-chrome-extension/blob/main/plugins/Gangster.js
-// const Gangster = {
-//   rules: [`All your responses should sound like a 1940s gangster`],
-// };
-
 // // https://github.com/gragland/chatgpt-chrome-extension/blob/main/plugins/Image.js
 // const Image = {
 //   rules: [
@@ -71,7 +66,5 @@ export default {
     Style,
     // Add image generation ability
     // Image,
-    // Talk like a 1940's gangster
-    //Gangster,
   ],
 };

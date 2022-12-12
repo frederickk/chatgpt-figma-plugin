@@ -97,7 +97,7 @@ const wdytButtonHandler = () => {
       questionText.disabled = false;
       window.setTimeout(() => {
         questionText.classList.remove('--error');
-      }, 5000);
+      }, 3000);
       statusIcon.innerHTML = 'send';
       statusIcon.classList.remove('--pending');
     });
