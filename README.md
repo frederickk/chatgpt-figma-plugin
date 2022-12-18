@@ -1,16 +1,17 @@
 # ChatGPT Figma Plugin
 
-v.0.2.2
+v.0.3.1
 
 ### Experimental ChatGPT plugin for Figma
 
 ---
 ### Overview
 
-![Screen capture of ChatGPT Figma Plugin UI](./assets/chat-gpt-figma-plugin-simple.gif)
+[![Screen capture of ChatGPT Figma Plugin UI](./assets/chat-gpt-figma-plugin-simple.gif)](https://youtu.be/D6XjwKuU4PU)
 
 This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy.
 
+[Watch the demo](https://youtu.be/D6XjwKuU4PU)
 
 ---
 ### Getting Started
@@ -37,12 +38,14 @@ This plugin is experimental and takes advantage of an [unofficial ChatGPT API](h
 ---
 ### Usage
 
-This plugin doesn't do anything overly complex. Simply enter a question or request for [ChatGPT](https://chat.openai.com), click the **Send** (paper airplane icon) button, and (after a few seconds) the results will either:
+Simply enter a question or request for [ChatGPT](https://chat.openai.com), click the **Send** (paper airplane icon) button, and (after a few seconds) the results will either:
 1. spawn a new text box or
 2. replace the text contents of the selected text box
 3. error out... try again?
 
-Below the **Send** button, is a little console output so you can see what's going on behind the scenes.
+Open the **Code** panel and enter any valid [Figma Plugin API javascript](https://www.figma.com/plugin-docs/api/api-reference) you would like to execute. ⚠️ **Be careful! this is done using [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and isn't the safest ⚠️**.
+
+Open the **Console** panel to reveal a little console output so you can see what's going on behind the scenes.
 
 
 ---

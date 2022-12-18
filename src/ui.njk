@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    {# <link rel="stylesheet" href="./ui.min.css"> #}
-  </head>
+  <head></head>
   <body>
-    <div class="container">
-      <div>
-        <textarea class="textarea type--xlarge" rows="3" id="question" name="question" placeholder="write a 3 sentence review for a mediocre coffee shop but with exceptional pastries"></textarea>
-        <div class="actions">
-          <button class="button button--primary" id="wdyt"><span class="material-symbols-outlined">send</span></button>
-          <button class="button button--secondary --hidden" id="conversation">Debug</button>
-        </div>
+    <div id="disclaimer" class="container disclaimer --hidden">
+      <div class="disclaimer__text type--xlarge">
+        <span>
+          This plugin is experimental and takes advantage of an <a href="https://github.com/transitive-bullshit/chatgpt-api" target="_blank" class="button--tertiary">unofficial ChatGPT API</a>. As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. If you've gotten this far, you're probably reasonably comfortable with terminal. Please refer to the <a href="https://github.com/frederickk/chatgpt-figma-plugin" target="_blank" class="button--tertiary">README</a> for additional setup information and requirements.
+        </span>
       </div>
-      <div id="konsole" class="konsole textarea" name="konsole"></div>
+      <div class="actions">
+        <button class="button button--primary" id="agree">Continue</button>
+        <button class="button button--secondary" id="disagree">Close</button>
+      </div>
     </div>
 
-    {# <script type="application/javascript" src="ui.js"></script> #}
+    <div class="container">
+      <div>
+        <textarea class="textarea type--xlarge" rows="6" id="question" name="question" placeholder=""></textarea>
+        <div class="actions">
+          <button class="button button--primary" id="wdyt"><span class="material-symbols-outlined" data-default="send">send</span></button>
+        </div>
+      </div>
+
+      <details id="details__code">
+        <summary class="label">Code</summary>
+        <textarea class="textarea" rows="18" id="eval" name="eval" placeholder=""></textarea>
+        <div class="actions">
+          <button class="button button--secondary" id="execute"><span class="material-symbols-outlined" data-default="code_blocks">code_blocks</span>&nbsp;Run</button>
+        </div>
+      </details>
+
+      <details id="details__konsole">
+        <summary class="label">Console</summary>
+        <div id="konsole" class="konsole textarea" name="konsole"></div>
+      </details>
+    </div>
+
+    <footer>
+      <div id="version"></div>
+      <div>
+        <a href="#" class="button--tertiary" id="debug">Debug</button>
+      </div>
+    </footer>
   </body>
 </html>
