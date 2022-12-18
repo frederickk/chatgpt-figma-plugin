@@ -1,0 +1,10 @@
+{
+  "name": "ChatGPT",
+  "id": "6920581530747371195",
+  "api": "1.0.0",
+  "main": "build/code.js",
+  "ui": "build/ui.html",
+  "editorType": [
+    "figma"
+  ]
+}

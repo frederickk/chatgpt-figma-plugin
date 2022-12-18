@@ -1,0 +1,26 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.cache
+
+# Folders #
+###################
+.tmp/
+build/
+node_modules/
+
+# Misc. #
+###################
+.vscode/
+*.pxd
+*.sketch
+
+# Configs #
+###################
+.env

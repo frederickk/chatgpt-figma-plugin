@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "dom",
+      "ES2020"
+    ],
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "rootDir": "./",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@figma"
+    ],
+    "outDir": "./build",
+    "newLine": "LF",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./**/*.ts"
+, "src/globals.mts"  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
+}

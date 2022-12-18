@@ -1,0 +1,122 @@
+@import url('../node_modules/figma-plugin-ds/dist/figma-plugin-ds.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --background-color: #fff;
+  --border-radius: 8px;
+  --font-size: 14px;
+  --error--color: #530101;
+  --error--background-color: #ffc5bf;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: var(--font-size);
+  text-align: center;
+  width: 244px;
+}
+
+button,
+.button {
+  cursor: pointer;
+  justify-content: center;
+}
+
+textarea {
+  line-height: 1.2em !important;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.actions {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  margin-block: 1ch;
+}
+
+.container {
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-flow: column nowrap;
+  gap: 1ch;
+  height: calc(100% - 20px);
+  justify-content: space-between;
+  margin: 1ch;
+}
+
+.--error {
+  background-color: var(--error--background-color);
+  color: var(--error--color) !important;
+}
+
+.--hidden {
+  display: none;
+  opacity: 0;
+  visibility: collapse;
+}
+
+.--pending {
+  animation-direction: normal;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-name: spin;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+.json-formatter-string {
+  white-space: pre-wrap !important;
+}
+
+.konsole,
+#konsole {
+  align-items: flex-start;
+  border: 0 !important;
+  color: var(--black3);
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 10px;
+  gap: 2ch;
+  overflow: hidden scroll;
+  text-align: left;
+  white-space: pre-wrap;
+
+  &__entry {
+    white-space: pre-wrap;
+    width: 100%;
+  }
+}
+
+#question {
+  font-family: sans-serif !important;
+}
+
+#wdyt {
+  font-family: 'Material Symbols Outlined' !important;
+  font-size: 24px !important;
+  transition: color 150ms ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
