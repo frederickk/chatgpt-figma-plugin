@@ -1,5 +1,8 @@
 import {UI} from './globals';
 
+/**
+ * Retrieves response from UI message posting.
+ */
 const getResponse = async (message: string) => {
   console.log('getResponse', message);
 
@@ -17,23 +20,19 @@ const getResponse = async (message: string) => {
     style: 'Regular'
   })
     .then(() => {
-      if (selection.type === 'TEXT') {
-        console.log('getResponse: figma.currentPage.selection[0]');
+      if (selection && selection.type === 'TEXT') {
         selection.characters = message;
       } else {
-        console.log('getResponse: figma.createText()');
         const text = figma.createText();
         text.characters = message
+        text.fontSize = 48;
         text.name = 'ChatGPT Messaage';
         text.x = 0;
         text.y = 0;
+        text.resize(960, 1024);
         figma.viewport.scrollAndZoomIntoView([text]);
       }
     });
-};
-
-const getConversation = () => {
-//   return conversation;
 };
 
 // UI
@@ -43,9 +42,6 @@ figma.ui.onmessage = (msg) => {
   switch (msg.type) {
     case 'get-response':
       getResponse(msg.message);
-      break;
-    case 'get-conversation':
-      getConversation();
       break;
     default:
       console.error(`Unhandled message: '${msg.type}'`);

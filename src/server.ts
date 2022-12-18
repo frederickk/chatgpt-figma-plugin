@@ -13,6 +13,8 @@ const app = express().use(cors()).use(bodyParser.json());
 
 const api = new ChatGPTAPI({
   sessionToken: process.env.SESSION_TOKEN || '',
+  clearanceToken: process.env.CLEARANCE_TOKEN || '',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
 });
 const conversation = api.getConversation();
 
@@ -43,7 +45,9 @@ app.post('/send', async (req: any, res: any) => {
   }
 });
 
-/**  */
+/**
+ * Retrieves instantiation information and prints to console.
+ */
 app.post('/debug', async (_req: any, res: any) => {
   try {
     await api.ensureAuth();
