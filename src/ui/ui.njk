@@ -16,15 +16,24 @@
 
     <div class="container">
       <div>
-        <textarea class="textarea type--xlarge" rows="6" id="question" name="question" placeholder=""></textarea>
+        <textarea class="textarea type--xlarge" rows="6" id="prompt" name="prompt" spellcheck="false" placeholder="ask (nearly) anything"></textarea>
         <div class="actions">
           <button class="button button--primary" id="wdyt"><span class="material-symbols-outlined" data-default="send">send</span></button>
+          <button class="button button--tertiary" id="feeling-lucky">I'm feeling lucky</button>
         </div>
       </div>
 
+      <details id="details__lexica">
+        <summary class="label">Lexica</summary>
+        <input type="text" class="input__field" id="lexica" name="lexica" spellcheck="false" placeholder="search Lexica"></input>
+        <div class="actions">
+          <button class="button button--secondary" id="find-lexica"><span class="material-symbols-outlined" data-default="search">search</span></button>
+        </div>
+      </details>
+
       <details id="details__code">
         <summary class="label">Code</summary>
-        <textarea class="textarea" rows="18" id="eval" name="eval" placeholder=""></textarea>
+        <textarea class="textarea" rows="18" id="eval" name="eval" spellcheck="false" placeholder=""></textarea>
         <div class="actions">
           <button class="button button--secondary" id="execute"><span class="material-symbols-outlined" data-default="code_blocks">code_blocks</span>&nbsp;Run</button>
         </div>

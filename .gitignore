@@ -20,6 +20,8 @@ node_modules/
 .vscode/
 *.pxd
 *.sketch
+*.mp4
+*.mov
 
 # Configs #
 ###################

@@ -1,6 +1,6 @@
 # ChatGPT Figma Plugin
 
-v.0.3.1
+v0.3.6
 
 ### Experimental ChatGPT plugin for Figma
 
@@ -9,7 +9,9 @@ v.0.3.1
 
 [![Screen capture of ChatGPT Figma Plugin UI](./assets/chat-gpt-figma-plugin-simple.gif)](https://youtu.be/D6XjwKuU4PU)
 
-This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy.
+This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy and the server has to often be restarted given the current ChatGPT interest.
+
+Image "creation" is facilitated through [Lexica](https://lexica.art) and [Unsplash](https://unsplash.com).
 
 [Watch the demo](https://youtu.be/D6XjwKuU4PU)
 
@@ -24,8 +26,8 @@ This plugin is experimental and takes advantage of an [unofficial ChatGPT API](h
 **Download and Build**
 
 1. Clone this repository into directory of your choice. `git clone https://github.com/frederickk/chatgpt-figma-plugin.git`
-2. Install necessary dependencies `npm install` (you might need to run `npm install --legacy-peer-deps`)
-3. Get a valid session token and a valid [clearance token](https://github.com/transitive-bullshit/chatgpt-api/issues/96) from [ChatGPT](https://chat.openai.com) (steps for getting the token are outlined [here](https://github.com/transitive-bullshit/chatgpt-api#session-tokens)), create a `.env` file, and paste the code into the file `SESSION_TOKEN="..."` and `CLEARANCE_TOKEN="..."`
+2. Install necessary dependencies `npm install`
+3. Create a `.env` file, and add your OpenAI login credentials `OPENAI_EMAIL="..."` and `OPENAI_PASSWORD="..."`
 4. [Build](#build) `npm run build`
 
 **Install and Run**
@@ -42,6 +44,8 @@ Simply enter a question or request for [ChatGPT](https://chat.openai.com), click
 1. spawn a new text box or
 2. replace the text contents of the selected text box
 3. error out... try again?
+
+Open the **Lexica** panel to search [Lexica](https://lexica.art) for AI generated work that matches your given desciption.
 
 Open the **Code** panel and enter any valid [Figma Plugin API javascript](https://www.figma.com/plugin-docs/api/api-reference) you would like to execute. ⚠️ **Be careful! this is done using [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and isn't the safest ⚠️**.
 
