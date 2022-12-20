@@ -7,13 +7,14 @@ v0.3.6
 ---
 ### Overview
 
-[![Screen capture of ChatGPT Figma Plugin UI](./assets/chat-gpt-figma-plugin-simple.gif)](https://youtu.be/D6XjwKuU4PU)
+[![Screen capture of ChatGPT Figma Plugin UI](./assets/chatgpt-figma-plugin-image.gif)](https://youtu.be/ifu89r0tOjw)
 
-This plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api). As such this plugin currently only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy and the server has to often be restarted given the current ChatGPT interest.
 
-Image "creation" is facilitated through [Lexica](https://lexica.art) and [Unsplash](https://unsplash.com).
+This experimental plugin allows designers to take advantage of Open AI's [ChatGPT](https://chat.openai.com/) directly within Figma. Image "creation" is facilitated through [Lexica](https://lexica.art) and [Unsplash](https://unsplash.com). There's also a small panel to execute code and a mini console.
 
-[Watch the demo](https://youtu.be/D6XjwKuU4PU)
+Because the plugin is experimental and takes advantage of an [unofficial ChatGPT API](https://github.com/transitive-bullshit/chatgpt-api) it only operates in "Developer mode" and could break or stop working at any time. You should be reasonably comfortable with terminal, as setup is a bit fussy and the server has to often be restarted given the current ChatGPT interest.
+
+[Watch the demo](https://youtu.be/ifu89r0tOjw)
 
 ---
 ### Getting Started
